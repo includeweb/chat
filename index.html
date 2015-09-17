@@ -22,6 +22,8 @@
   socket.on('new_message_notification_to_me', function (data) {
       // $('.mensajes').append('<div class="mensaje-content"><div class="imagen"><img src="'+data.imagen+'" /></div><div class="mensaje">'+data.mensaje+'</div></div>');
        $('.mensajes').append('<div class="row"><div class="col s6 m8 offset-m2 l6 offset-l3"><div class="card-panel grey lighten-5 z-depth-1"><div class="row valign-wrapper"><div class="col s4"><img src="'+data.imagen+'" alt="" class="circle responsive-img"></div><div class="col s8"><span class="black-text">'+data.mensaje+'</span></div></div></div></div></div>');
+        var dest = $(".mensajes").offset().bottom;
+      $(".mensajes").animate({scrollTop: dest});
     });
 
 
@@ -39,7 +41,7 @@
 <a href="javascript:void(0);" id="enviar" class="btn waves-effect waves-light">enviar</a>
 
 
-<div class="mensajes z-depth-3" style="height:600px;overflow-y:visible"></div>
+<div class="mensajes z-depth-3" style="min-height:600px;"></div>
 </div>
 </body>
 </html>
