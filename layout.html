@@ -15,8 +15,8 @@
   .padding{padding:15px!important;}
 </style>
 <script>
-  //var socket = io.connect('http://chat.includeweb.com.ar');
-  var socket = io.connect('http://localhost:8030');
+  var socket = io.connect('http://chat.includeweb.com.ar');
+  //var socket = io.connect('http://localhost:8030');
   var username ;
 
   socket.on('new_message_notification', function (data) {
